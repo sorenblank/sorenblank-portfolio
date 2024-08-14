@@ -31,7 +31,7 @@ function Testimonials() {
       {/* TODO: Redesign for horizontal */}
       <div className="md:px-6">
         <div className="grid gap-10">
-          <div className="flex w-full flex-col items-center justify-center text-center lg:flex-row lg:justify-between lg:text-left">
+          <div className="flex w-full flex-col items-center justify-center text-left lg:flex-row lg:justify-between">
             <div className="flex flex-col items-center lg:items-start">
               <Reveal>
                 <h2 className="text-4xl font-bold leading-tight tracking-tighter sm:text-5xl md:text-5xl md:leading-tight lg:text-6xl lg:leading-tight">
