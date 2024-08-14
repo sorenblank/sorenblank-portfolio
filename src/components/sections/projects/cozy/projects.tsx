@@ -13,7 +13,7 @@ function Projects() {
       id="projects"
     >
       <div className="space-y-4 px-4 md:space-y-6 md:px-6 lg:space-y-10">
-        <div className="flex w-full flex-col items-center justify-center text-left lg:flex-row lg:justify-between">
+        <div className="flex w-full flex-col items-start justify-center text-left lg:flex-row lg:items-center lg:justify-between">
           <div className="flex flex-col items-center lg:items-start">
             <Reveal>
               <h2 className="text-4xl font-bold leading-tight tracking-tighter sm:text-5xl md:text-5xl md:leading-tight lg:text-6xl lg:leading-tight">
@@ -26,7 +26,7 @@ function Projects() {
             for clients/works and personal projects.
           </p>
         </div>
-        <div className="mt-6 grid w-full grid-cols-1 gap-4 sm:grid-cols-2">
+        <div className="mt-10 grid w-full grid-cols-1 gap-4 sm:grid-cols-2">
           {projects.map((project, index) => (
             <ProjectCard
               key={index}
