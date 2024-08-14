@@ -8,7 +8,8 @@ const metadata: Metadata = {
   },
   site: {
     title: 'Soren Blank',
-    description: 'I am also known as Siyam Afroz. I love creating things.',
+    description:
+      'Hi! I am Soren. These days I am working as a Frontend Engineer. But apart from that, there are a lot of things that catches my interest. And I will try to share some of them here.',
     ogImage: '/images/hero.gif',
     url: 'https://www.sorenblank.com',
     keywords: [
