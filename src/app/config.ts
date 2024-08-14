@@ -20,7 +20,8 @@ const metadata: Metadata = {
     ],
     language: 'en',
     charset: 'UTF-8'
-  }
+  },
+  theme: '#ffffff'
 };
 
 export { metadata };

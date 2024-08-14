@@ -13,4 +13,5 @@ export interface Metadata {
     language: string;
     charset: string;
   };
+  theme: string;
 }

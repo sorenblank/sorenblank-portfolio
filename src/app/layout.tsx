@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Instrument_Sans } from 'next/font/google';
 import '@/styles/globals.css';
 
@@ -88,6 +88,10 @@ export const metadata: Metadata = {
       }
     ]
   }
+};
+
+export const viewport: Viewport = {
+  themeColor: meta.theme
 };
 
 export default function RootLayout({
