@@ -32,6 +32,7 @@ const RevealText = (props: RevealTextProps) => {
             key={index}
             transition={{ duration: 0.5, delay: (props.delay || 0.25) * index }}
             width={props.width}
+            className={props.className}
           >
             {word}
           </Reveal>

@@ -49,7 +49,7 @@ export const generateMetadata = async (
       description: description,
       images: [
         {
-          url: `/images/projects/${params.slug}/cover.png`,
+          url: `/images/projects/${params.slug}/cover.webp`,
           width: 1280,
           height: 832,
           alt: description,
@@ -63,7 +63,7 @@ export const generateMetadata = async (
       description: description,
       images: [
         {
-          url: `/images/projects/${params.slug}/cover.png`,
+          url: `/images/projects/${params.slug}/cover.webp`,
           width: 1280,
           height: 832,
           alt: description
@@ -90,7 +90,7 @@ const ProjectPage = (props: ProjectPageProps) => {
     <div className="container mx-auto">
       <Header metadata={metadata} />
       <Image
-        src={`/images/projects/${slug}/cover.jpg`}
+        src={`/images/projects/${slug}/cover.webp`}
         width={1280}
         height={832}
         alt={metadata.name}

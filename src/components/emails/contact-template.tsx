@@ -21,16 +21,23 @@ interface ContactEmailProps {
   name: string;
   email: string;
   message: string;
+  projectType: string;
+  projectBudget: string;
 }
 
 const baseUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
   : '';
 
-export const ContactEmail = ({ name, email, message }: ContactEmailProps) => {
+export const ContactEmail = ({
+  name,
+  email,
+  message,
+  projectType,
+  projectBudget
+}: ContactEmailProps) => {
   const previewText = `Message from ${name} on Portfolio`;
 
-  // TODO: Make a custom design, instead of the template
   return (
     <Html>
       <Head />
@@ -66,7 +73,17 @@ export const ContactEmail = ({ name, email, message }: ContactEmailProps) => {
             </Text>
 
             <Text className="text-[14px] leading-[24px] text-black">
-              This is the message sent: {message}
+              <strong>Project Type:</strong> {projectType}
+            </Text>
+            <Text className="text-[14px] leading-[24px] text-black">
+              <strong>Project Budget:</strong> {projectBudget}
+            </Text>
+
+            <Text className="text-[14px] leading-[24px] text-black">
+              <strong>Message:</strong>
+            </Text>
+            <Text className="whitespace-pre-wrap text-[14px] leading-[24px] text-black">
+              {message}
             </Text>
             <Hr className="mx-0 my-[26px] w-full border border-solid border-[#eaeaea]" />
             <Text className="text-[12px] leading-[24px] text-[#666666]">
@@ -81,11 +98,13 @@ export const ContactEmail = ({ name, email, message }: ContactEmailProps) => {
 };
 
 ContactEmail.PreviewProps = {
-  name: 'Jane Doe',
-  email: 'jane@example.com',
+  name: 'Soren Blank',
+  email: 'soren@sorenblank.com',
+  projectType: 'Website',
+  projectBudget: '2-5K',
   message: `Hello!
 
-  This is Jane Doe, from Example. Just wanted to say hi!
+This is John Doe, from Example. Just wanted to say hi!
   `
 } as ContactEmailProps;
 

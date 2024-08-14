@@ -40,6 +40,14 @@ function Contact() {
     });
   }, [state]);
 
+  // Function to chunk the social icons array
+  const chunkArray = (arr: any, size: any) =>
+    Array.from({ length: Math.ceil(arr.length / size) }, (v, i) =>
+      arr.slice(i * size, i * size + size)
+    );
+
+  const socialIconRows = chunkArray(contact.socials, 5);
+
   return (
     <MotionWrap className="w-full py-24 lg:py-32" id="contact">
       <div className=" px-4 md:px-6">
@@ -58,19 +66,23 @@ function Contact() {
                 {contact.email}
               </a>
             </p>
-            <div className="flex space-x-1">
-              {contact.socials.map(({ Icon, href }, index) => (
-                <a
-                  target="_blank"
-                  href={href}
-                  className={cn(
-                    buttonVariants({ variant: 'outline', size: 'icon' }),
-                    'text-md gap-1'
-                  )}
-                  key={index}
-                >
-                  {Icon && <Icon className="h-4 w-4" />}
-                </a>
+            <div className="space-y-2">
+              {socialIconRows.map((row, rowIndex) => (
+                <div key={rowIndex} className="flex space-x-1">
+                  {row.map(({ Icon, href }: any, index: any) => (
+                    <a
+                      target="_blank"
+                      href={href}
+                      className={cn(
+                        buttonVariants({ variant: 'outline', size: 'icon' }),
+                        'text-md gap-1'
+                      )}
+                      key={index}
+                    >
+                      {Icon && <Icon className="h-4 w-4" />}
+                    </a>
+                  ))}
+                </div>
               ))}
             </div>
           </div>

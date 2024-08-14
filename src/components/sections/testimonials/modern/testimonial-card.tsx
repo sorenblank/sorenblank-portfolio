@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
+import Link from 'next/link';
 
 import { Testimonial } from '@/types/testimonial';
 
@@ -13,6 +14,7 @@ function TestimonialCard({
   image,
   name,
   username,
+  url,
   testimonial,
   className
 }: TestimonialCardProps) {
@@ -29,7 +31,17 @@ function TestimonialCard({
           />
         </div>
         <div className="ml-4">
-          <p className="font-semibold">{name || 'Anonymous'}</p>
+          {url && (
+            <Link
+              href={url}
+              target="_blank"
+              className="font-semibold underline underline-offset-4"
+            >
+              {' '}
+              {name || 'Anonymous'}
+            </Link>
+          )}
+          {!url && <p className="font-semibold">{name || 'Anonymous'}</p>}
           {username && <p className="text-sm text-gray-500">{username}</p>}
         </div>
       </div>

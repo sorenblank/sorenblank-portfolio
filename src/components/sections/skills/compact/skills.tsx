@@ -7,16 +7,20 @@ import { skills } from '@/components/sections/skills/config';
 
 function Skills() {
   return (
-    <MotionWrap className="w-full py-24 lg:py-32" id="skills">
+    <MotionWrap
+      className="mx-auto w-full max-w-[1400px] py-24 lg:py-32"
+      id="skills"
+    >
       <div className="px-4 md:px-6">
         <div className="grid gap-10 lg:grid-cols-2">
           <div className="space-y-4">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl/none">
-              My Skills
+              My Skills / Interests
             </h2>
             <p className="text-gray-500 dark:text-gray-400">
-              Here are some of my skills where I&apos;ve turned knowledge into
-              expertise, making things happen.
+              Here are some of my skills and interests that I&apos;ve developed
+              into areas of expertise, along with others that I&apos;m
+              passionate about continuing to learn and grow in.
             </p>
           </div>
           <div className="grid gap-4">

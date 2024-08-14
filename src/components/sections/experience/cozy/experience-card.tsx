@@ -18,6 +18,8 @@ interface ExperienceCardProps extends Experience {
 function ExperienceCard({
   company,
   name,
+  url,
+  image,
   duration,
   description,
   className
@@ -25,10 +27,30 @@ function ExperienceCard({
   return (
     <Card className={cn('border-none bg-transparent', className)}>
       <CardContent className="p-1">
-        <div className="flex items-baseline justify-between">
-          <h3 className="text-2xl font-semibold">
-            <RevealText>{company}</RevealText>
-          </h3>
+        <div className="flex items-center justify-between">
+          <div className="inline-flex items-center gap-2">
+            {image && (
+              <Image
+                src={image}
+                alt={company}
+                width={40}
+                height={32}
+                className="aspect-square rounded-sm"
+              />
+            )}
+
+            <h3 className="text-2xl font-semibold">
+              {url ? (
+                <Link href={url}>
+                  <RevealText className="underline-offset-2 hover:underline">
+                    {company}
+                  </RevealText>
+                </Link>
+              ) : (
+                <RevealText>{company}</RevealText>
+              )}
+            </h3>
+          </div>
           <span className="text-sm font-medium">
             <RevealText>{duration}</RevealText>
           </span>

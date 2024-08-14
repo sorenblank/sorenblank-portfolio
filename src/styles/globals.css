@@ -88,3 +88,41 @@
     @apply shadow-none;
   }
 }
+
+
+
+
+body {
+  --sb-track-color: hsl(var(--background));
+  --sb-thumb-color: hsl(var(--primary));
+  --sb-size: 14px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size)
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 8px;
+  border: 4px solid var(--sb-track-color);
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
+  }
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body[data-scroll-locked] {
+  min-width: 100%;
+}

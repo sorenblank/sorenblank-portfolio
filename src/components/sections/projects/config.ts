@@ -2,52 +2,52 @@ import { Project } from '@/types/project';
 
 const projects: Project[] = [
   {
-    name: 'Personal Portfolio Website',
-    slug: 'portfolio',
+    name: 'Safe App',
+    slug: 'safeapp_landing_page',
     description:
-      'A personal portfolio to showcase your coding projects, resume, and skills in a beautifully designed format.',
-    thumbnail: '/images/projects/portfolio/cover.jpg',
-    tags: ['NextJS', 'Chakra UI', 'TailwindCSS', 'Drizzle ORM']
+      'A landing page for Safe App, a company that provides dispute resolution services for online and physical transactions.',
+    thumbnail: '/images/projects/safeapp_landing_page/cover.webp',
+    tags: ['NextJS', 'TailwindCSS', 'Framer Motion', 'Notion API']
   },
   {
-    name: 'Recipe Sharing App',
-    slug: 'recipe_app',
+    name: 'Designer Portfolio / Abdullah Khan',
+    slug: 'designer_portfolio',
     description:
-      'A social app for food lovers where users can post, share, and discover recipes from around the world.',
-    thumbnail: '/images/projects/recipe_app/cover.jpg',
-    tags: ['ReactJS', 'Express', 'Firebase', 'TailwindCSS']
+      'A portfolio website that I have made for my designer friend Abdulla, using NextJS, TailwindCSS, and MDX for blogs.',
+    thumbnail: '/images/projects/designer_portfolio/cover.webp',
+    tags: ['NextJS', 'TailwindCSS', 'MDX']
   },
   {
-    name: 'Virtual Study Group Platform',
-    slug: 'study_group',
+    name: 'Burgir',
+    slug: 'burgir',
     description:
-      'A platform where students can form virtual study groups, schedule sessions, and share resources in real-time.',
-    thumbnail: '/images/projects/study_group/cover.jpg',
-    tags: ['ReactJS', 'Firebase', 'Bootstrap']
+      'A professional business landing page for a fictional business called Burgir, built on top of NextJS framework and Material-UI.',
+    thumbnail: '/images/projects/burgir/cover.webp',
+    tags: ['NextJS', 'Material-UI', 'React']
   },
   {
-    name: 'Fitness Tracker App',
-    slug: 'fitness_tracker',
+    name: 'BrainWave',
+    slug: 'brainwave',
     description:
-      'A mobile app that helps users track their fitness activities, set goals, and monitor progress with motivational tools.',
-    thumbnail: '/images/projects/fitness_tracker/cover.jpg',
-    tags: ['React Native', 'Firebase', 'TailwindCSS']
+      'A professional modern AI landing page crafted with TailwindCSS library and the powerful Next.js framework.',
+    thumbnail: '/images/projects/brainwave/cover.webp',
+    tags: ['NextJS', 'TailwindCSS']
   },
   {
-    name: 'Eco-friendly Marketplace',
-    slug: 'eco_marketplace',
+    name: 'Flickertv',
+    slug: 'flickertv',
     description:
-      'An e-commerce platform dedicated to eco-friendly products where users can buy, sell, and learn about sustainable living.',
-    thumbnail: '/images/projects/eco_marketplace/cover.jpg',
-    tags: ['NextJS', 'Chakra UI', 'TailwindCSS', 'Drizzle ORM']
+      'Flickertv is an open source project that displays random quotes on a CRT TV-like screen. You can add your own favorite quote as your first open source contribution!',
+    thumbnail: '/images/projects/flickertv/cover.webp',
+    tags: ['NextJS', 'React']
   },
   {
-    name: 'Interactive Coding Tutorial Site',
-    slug: 'coding_tutorials',
+    name: 'Wearvista',
+    slug: 'wearvista',
     description:
-      'A website offering interactive coding tutorials and challenges to help users learn programming languages through practice.',
-    thumbnail: '/images/projects/coding_tutorials/cover.jpg',
-    tags: ['NextJS', 'TailwindCSS', 'Drizzle ORM']
+      'A professional modern e-commerce landing page for a fashion brand called Wearvista. Crafted with vanilla HTML CSS and Javascript.',
+    thumbnail: '/images/projects/wearvista/cover.webp',
+    tags: ['HTML', 'CSS', 'Javascript']
   }
 ];
 

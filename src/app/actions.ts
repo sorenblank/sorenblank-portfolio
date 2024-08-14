@@ -18,7 +18,13 @@ const contactFormSchema = z.object({
       required_error: 'Please enter a valid email.'
     })
     .email(),
-  message: z.string().max(380).min(4)
+  message: z.string().max(380).min(4),
+  projectType: z.enum(['Website', 'WebApp', 'Other'], {
+    required_error: 'Please select a project type.'
+  }),
+  projectBudget: z.enum(['<2K', '2-5K', '5-10K', '>10K'], {
+    required_error: 'Please select a project budget.'
+  })
 });
 
 const EMAIL_FROM = process.env.EMAIL_FROM;
@@ -30,7 +36,9 @@ export async function contactSubmit(prevState: any, formData: FormData) {
     const validatedFields = contactFormSchema.safeParse({
       name: formData.get('name'),
       email: formData.get('email'),
-      message: formData.get('message')
+      message: formData.get('message'),
+      projectType: formData.get('projectType'),
+      projectBudget: formData.get('projectBudget')
     });
 
     if (!validatedFields.success) {
@@ -41,12 +49,13 @@ export async function contactSubmit(prevState: any, formData: FormData) {
       };
     }
 
-    const { name, email, message } = validatedFields.data;
+    const { name, email, message, projectType, projectBudget } =
+      validatedFields.data;
 
     if (!EMAIL_FROM || !EMAIL_TO) {
       return {
         success: false,
-        message: 'Oops! There went wrong. Please try again later.'
+        message: 'Oops! Something went wrong. Please try again later.'
       };
     }
 
@@ -54,7 +63,7 @@ export async function contactSubmit(prevState: any, formData: FormData) {
       from: EMAIL_FROM,
       to: EMAIL_TO,
       subject: `Message from ${name} on Portfolio`,
-      react: ContactEmail({ name, email, message })
+      react: ContactEmail({ name, email, message, projectType, projectBudget })
     });
 
     if (error) {

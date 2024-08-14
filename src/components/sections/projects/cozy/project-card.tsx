@@ -45,10 +45,10 @@ function ProjectCard({
           width={0}
           height={0}
           sizes="100vw"
-          className="h-auto max-h-96 w-full object-cover transition-transform duration-300 hover:scale-105"
+          className="aspect-[16/9] w-full object-cover transition-transform duration-300 hover:scale-105"
         />
       </CardContent>
-      <CardFooter className="grid grid-cols-1 items-center gap-4 p-4 md:p-6 lg:grid-cols-2">
+      <CardFooter className="grid grid-cols-1 items-center gap-4 p-4 md:p-6 lg:grid-cols-1">
         <div>
           <h3 className="text-xl font-bold">
             <RevealText delay={0.1}>{name}</RevealText>
@@ -59,26 +59,6 @@ function ProjectCard({
           <div className="mt-2 flex flex-wrap gap-2">
             {tags?.map((tag, index) => <Badge key={index}>{tag}</Badge>)}
           </div>
-        </div>
-        <div className="flex items-center justify-end">
-          <TooltipProvider>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Button
-                  variant="outline"
-                  className="z-[2] rounded-full border bg-muted hover:bg-foreground/10"
-                  asChild
-                >
-                  <Link href={'/projects/' + slug}>
-                    <InfoIcon />
-                  </Link>
-                </Button>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>More Details</p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
         </div>
       </CardFooter>
       <Link href={'/projects/' + slug} className="z-1 absolute inset-0 block" />

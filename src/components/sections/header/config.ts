@@ -1,45 +1,44 @@
 import { Link } from '@/types/link';
 
 // This is a setting for the compact header
-const linkLimit = 4;
+const linkLimit = 5;
 //
 
 const links: Link[] = [
   {
     title: 'Home',
     href: '/',
-    thumbnail: 'home.jpg'
+    thumbnail: 'home.webp'
   },
   {
-    title: 'About',
-    href: '#about',
-    thumbnail: 'about.jpg'
-  },
-  {
-    title: 'Projects',
-    href: '#projects',
-    thumbnail: 'projects.jpg'
+    title: 'Tech',
+    href: '#tech',
+    thumbnail: 'tech.webp'
   },
   {
     title: 'Skills',
     href: '#skills',
-    thumbnail: 'skills.jpg'
+    thumbnail: 'skills.webp'
+  },
+  {
+    title: 'Experience',
+    href: '#experience',
+    thumbnail: 'experience.webp'
+  },
+  {
+    title: 'Projects',
+    href: '#projects',
+    thumbnail: 'projects.webp'
   },
   {
     title: 'Testimonials',
     href: '#testimonials',
-    thumbnail: 'testimonials.jpg'
-  },
-  {
-    title: 'Blog',
-    href: 'https://blog.example.com',
-    thumbnail: 'blog.jpg',
-    target: '_blank'
+    thumbnail: 'testimonials.webp'
   },
   {
     title: 'Contact',
     href: '#contact',
-    thumbnail: 'contact.jpg'
+    thumbnail: 'contactV2.webp'
   }
 ];
 

@@ -1,9 +1,14 @@
 'use client';
 import React from 'react';
+import dynamic from 'next/dynamic';
+
+const Carousel = dynamic(
+  () => import('@/components/ui/carousel').then((mod) => mod.Carousel),
+  { ssr: false }
+);
 
 import MotionWrap from '@/components/motion-wrap';
 import {
-  Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
@@ -19,20 +24,18 @@ import Autoplay from 'embla-carousel-auto-scroll';
 
 function Testimonials() {
   return (
-    <MotionWrap className="w-full py-24 lg:py-32" id="testimonials">
+    <MotionWrap
+      className="mx-auto w-full max-w-[1400px] py-24 lg:py-32"
+      id="testimonials"
+    >
       {/* TODO: Redesign for horizontal */}
-      <div className="px-4 md:px-6">
+      <div className="md:px-6">
         <div className="grid gap-10">
           <div className="flex w-full flex-col items-center justify-center text-center lg:flex-row lg:justify-between lg:text-left">
             <div className="flex flex-col items-center lg:items-start">
               <Reveal>
                 <h2 className="text-4xl font-bold leading-tight tracking-tighter sm:text-5xl md:text-5xl md:leading-tight lg:text-6xl lg:leading-tight">
-                  My
-                </h2>
-              </Reveal>
-              <Reveal>
-                <h2 className="-mt-2 text-4xl font-bold leading-tight tracking-tighter sm:text-5xl md:text-5xl md:leading-tight lg:text-6xl lg:leading-tight">
-                  Testimonials
+                  My Testimonials
                 </h2>
               </Reveal>
             </div>
@@ -42,7 +45,7 @@ function Testimonials() {
             </p>
           </div>
 
-          <div className="flex flex-col items-center justify-center gap-4 overflow-hidden">
+          <div className="flex flex-col items-center justify-center gap-4 overflow-hidden bg-gradient-to-r">
             <Carousel
               opts={{
                 align: 'start',
@@ -51,10 +54,13 @@ function Testimonials() {
               }}
               plugins={[
                 Autoplay({
-                  speed: 1
+                  speed: 1,
+                  stopOnMouseEnter: false,
+                  stopOnFocusIn: false,
+                  stopOnInteraction: false
                 })
               ]}
-              className="w-full"
+              className="w-full before:absolute before:left-0 before:top-0 before:z-[2] before:h-full before:w-[100px] before:bg-none before:content-[''] after:absolute after:right-0 after:top-0 after:z-[2] after:h-full after:w-[100px] after:-scale-x-100 after:bg-none after:content-[''] md:before:bg-[linear-gradient(to_right,hsl(var(--background))_0%,hsl(var(--background)/0)_100%)] md:after:bg-[linear-gradient(to_right,hsl(var(--background))_0%,hsl(var(--background)/0)_100%)]"
             >
               <CarouselContent>
                 {testimonials.map((testimonial, index) => (
@@ -67,6 +73,7 @@ function Testimonials() {
                         name={testimonial.name}
                         image={testimonial.image}
                         username={testimonial.username}
+                        url={testimonial.url}
                         testimonial={testimonial.testimonial}
                       />
                     </div>
@@ -77,16 +84,19 @@ function Testimonials() {
             <Carousel
               opts={{
                 align: 'start',
-                dragFree: true,
+                dragFree: false,
                 loop: true
               }}
               plugins={[
                 Autoplay({
                   speed: 1,
+                  stopOnMouseEnter: false,
+                  stopOnFocusIn: false,
+                  stopOnInteraction: false,
                   direction: 'backward'
                 })
               ]}
-              className="w-full"
+              className="w-full before:absolute before:left-0 before:top-0 before:z-[2] before:h-full before:w-[100px] before:bg-none before:content-[''] after:absolute after:right-0 after:top-0 after:z-[2] after:h-full after:w-[100px] after:-scale-x-100 after:bg-none after:content-[''] md:before:bg-[linear-gradient(to_right,hsl(var(--background))_0%,hsl(var(--background)/0)_100%)] md:after:bg-[linear-gradient(to_right,hsl(var(--background))_0%,hsl(var(--background)/0)_100%)]"
             >
               <CarouselContent>
                 {testimonials.reverse().map((testimonial, index) => (
@@ -99,6 +109,7 @@ function Testimonials() {
                         name={testimonial.name}
                         image={testimonial.image}
                         username={testimonial.username}
+                        url={testimonial.url}
                         testimonial={testimonial.testimonial}
                       />
                     </div>

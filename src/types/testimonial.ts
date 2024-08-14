@@ -3,4 +3,5 @@ export interface Testimonial {
   name?: string;
   username?: string;
   testimonial?: string;
+  url?: string;
 }

@@ -2,46 +2,58 @@ import { Testimonial } from '@/types/testimonial';
 
 const testimonials: Testimonial[] = [
   {
-    name: 'Jane Doe',
-    image: '/images/person/1.jpg',
-    username: 'janedoe',
+    name: 'Muhammad Ali / Sr. Software Engineer',
+    image: '/images/person/nerdjfpb.webp',
+    username: 'nerdjfpb',
+    url: 'https://www.linkedin.com/in/nerdjfpb/',
     testimonial:
-      'Collaborating with John on this project was a fantastic experience. His dedication and expertise were invaluable.'
+      'Working with Siyam was a fun experince, he got growth mindset. Funny, Trustworthy and Fast 👌.'
   },
   {
-    name: 'Emily Smith',
-    image: '/images/person/2.jpg',
-    username: 'emilysmith',
+    name: 'Zahin Imam / Founder at WearVista',
+    image: '/images/person/zahin.webp',
+    username: 'zahinimam',
+    url: 'https://www.linkedin.com/in/zahinimam/',
     testimonial:
-      "John's work on the project was outstanding. His problem-solving skills and attention to detail greatly contributed to our success."
+      'Siyam basically has a unique approach with creativity and dedication. He’s a close friend of mine whose energy and humor while working with my brand WearVista made it more fun than just working.'
   },
   {
-    name: 'Michael Johnson',
-    image: '/images/person/3.jpg',
-    username: 'michaeljohnson',
+    name: 'Ibrahim / Fullstack Developer',
+    image: '/images/person/ibrahim.webp',
+    username: 'samurmaykr',
     testimonial:
-      "John's innovative approach and technical proficiency were key to the success of our project. Highly recommend working with him."
+      'Soren is a solid frontend developer, not afraid to take the next step. His attention to detail and creative approach really stood out in our projects. '
   },
   {
-    name: 'Sarah Williams',
-    image: '/images/person/4.jpg',
-    username: 'sarahwilliams',
+    name: 'Tamim / Ui-Ux Designer',
+    image: '/images/person/tamim.webp',
+    username: 'coldi2530',
     testimonial:
-      'John has an exceptional ability to communicate complex ideas clearly. His contributions were crucial to the project’s success.'
+      'Soren is the guy I can rely on. A good working partner who is very helpful indeed.'
   },
   {
-    name: 'David Brown',
-    image: '/images/person/5.jpg',
-    username: 'davidbrown',
+    name: 'Abdulla Khan / Lead Designer',
+    image: '/images/person/abdulla.webp',
+    username: 'abdulla00k',
+    url: 'https://www.linkedin.com/in/abdulla00k/',
     testimonial:
-      'Working with John was a pleasure. His professionalism and technical skills are top-notch. Highly recommend him for any project.'
+      "Bro the portfolio you've made me, it's just awesome. really great. The design is simple and catchy and the project showcase is just cool."
   },
   {
-    name: 'Jessica Taylor',
-    image: '/images/person/6.jpg',
-    username: 'jessicataylor',
+    name: 'Abir / Backend Dev',
+    image: '/images/person/hasib.webp',
+    username: 'abir-4-dev',
+    url: 'https://www.linkedin.com/in/abir-4-dev/',
     testimonial:
-      "John's creativity and problem-solving abilities were impressive. He played a key role in the project's success."
+      'After working with him in several projects I noticed he always looks for perfection in work which pushes him to self improvement. Not to mention his adaptation capability is on another level.'
+  },
+  {
+    name: 'Omar / Fullstack SWE',
+    image: '/images/person/omar.webp',
+    username: 'okira_e',
+    url: 'https://www.linkedin.com/in/omar-rafat-jalal/',
+    testimonial:
+      'As a co-worker to Siyam, I really enjoyed working with someone that has a passion for what he does.'
   }
 ];
 
