@@ -27,7 +27,7 @@ interface ContactEmailProps {
 
 const baseUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
-  : '';
+  : 'https://sorenblank.com';
 
 export const ContactEmail = ({
   name,
