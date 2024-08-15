@@ -1,18 +1,13 @@
 'use client';
-import React from 'react';
+
+import React, { useState, useEffect } from 'react';
 import { buttonVariants } from '@/components/ui/button';
 import MotionWrap from '@/components/motion-wrap';
-
 import { toast } from '@/components/ui/use-toast';
-
 import ContactForm from './contact-form';
-
 import { contact } from '@/components/sections/contact/config';
-
 import { contactSubmit } from '@/app/actions';
-
 import { useFormState } from 'react-dom';
-import { useEffect } from 'react';
 import { cn } from '@/lib/utils';
 
 interface ValidationErrors {
@@ -31,6 +26,7 @@ const initialState: ValidationErrors = {
 
 function Contact() {
   const [state, formAction] = useFormState(contactSubmit, initialState);
+  const [resetForm, setResetForm] = useState(false);
 
   useEffect(() => {
     if (state?.message === '') return;
@@ -38,7 +34,17 @@ function Contact() {
     toast({
       title: state?.message
     });
+
+    if (state.success) {
+      setResetForm(true);
+    }
   }, [state]);
+
+  useEffect(() => {
+    if (resetForm) {
+      setResetForm(false);
+    }
+  }, [resetForm]);
 
   // Function to chunk the social icons array
   const chunkArray = (arr: any, size: any) =>
@@ -90,7 +96,7 @@ function Contact() {
             </div>
           </div>
           <form action={formAction} className="grid gap-4">
-            <ContactForm state={state} />
+            <ContactForm state={state} resetForm={resetForm} />
           </form>
         </div>
       </div>

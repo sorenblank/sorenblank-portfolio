@@ -50,17 +50,6 @@ function About() {
 
           <p className="mt-6 max-w-[700px] text-gray-500 dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
             <RevealText delay={0.01}>
-              Computers, smartphones, cars, and all kinds of technological
-              advancements have always fascinated me. I got my first computer
-              back in 2011, and like every kid, I enjoyed playing games like GTA
-              Vice City, NFS MW 2005 (GOAT), and House of the Dead. I dreamed of
-              making my own games, but as a kid, I lacked internet access and
-              know-how, and school kept me busy ( typical asian ).
-            </RevealText>
-          </p>
-
-          <p className="mt-6 max-w-[700px] text-gray-500 dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            <RevealText delay={0.01}>
               This was true until COVID-19 hit. Just before the lockdown, I got
               a new desktop. With a PC, WiFi, and plenty of free time during
               lockdown, I finally had the chance to explore.

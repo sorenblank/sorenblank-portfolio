@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
@@ -30,10 +31,20 @@ interface ValidationErrors {
 
 interface ContactFormProps extends React.HTMLAttributes<HTMLDivElement> {
   state: ValidationErrors;
+  resetForm: boolean;
 }
 
-export default function ContactForm({ state }: ContactFormProps) {
+export default function ContactForm({ state, resetForm }: ContactFormProps) {
   const { pending } = useFormStatus();
+
+  useEffect(() => {
+    if (resetForm) {
+      const form = document.querySelector('form') as HTMLFormElement;
+      if (form) {
+        form.reset();
+      }
+    }
+  }, [resetForm]);
 
   return (
     <>
