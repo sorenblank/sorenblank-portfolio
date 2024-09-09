@@ -3,6 +3,14 @@ import { Experience } from '@/types/experience';
 const experiences: Experience[] = [
   {
     name: 'Frontend Engineer',
+    duration: 'Sep 2024 - Present',
+    company: 'Spicenet',
+    url: 'https://www.linkedin.com/company/spicenet',
+    image: '/images/companies/spicenet.webp',
+    description: 'Working on the core WEB3 DEX product of Spicenet.'
+  },
+  {
+    name: 'Frontend Engineer',
     duration: 'July 2024 - Present',
     company: 'Entech',
     url: 'https://www.linkedin.com/company/entech-boiler-controls',
@@ -12,7 +20,7 @@ const experiences: Experience[] = [
   },
   {
     name: 'Frontend Engineer',
-    duration: 'Jun 2024 - Present',
+    duration: 'Jun 2024 - Aug 2024',
     company: 'Safe',
     url: 'https://www.linkedin.com/company/safehq',
     image: '/images/companies/safe.webp',
