@@ -27,7 +27,7 @@ const contact: Contact = {
     },
     {
       name: 'Facebook',
-      href: 'https://facebook.com/soren.blank.0',
+      href: 'https://www.facebook.com/iamsoren',
       Icon: SiFacebook
     },
     {
