@@ -32,7 +32,7 @@ const contact: Contact = {
     },
     {
       name: 'Instagram',
-      href: 'https://instagram.com/sorenblank',
+      href: 'https://instagram.com/sorenblank_',
       Icon: SiInstagram
     },
     {
@@ -67,7 +67,7 @@ const contact: Contact = {
     },
     {
       name: 'Substack',
-      href: 'https://siyamafroz.substack.com',
+      href: 'https://sorenblank.substack.com',
       Icon: SiSubstack
     },
     {
